@@ -15,7 +15,10 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
-      "@/*": ["./src/*"]
+      "@atoms/*": ["./src/components/UI/atoms/*"],
+      "@molecules/*": ["./src/components/UI/molecules/*"],
+      "@organisms/*": ["./src/components/UI/organisms/*"],
+      "@templates/*": ["./src/components/templates/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
