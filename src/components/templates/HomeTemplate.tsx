@@ -1,4 +1,4 @@
-import { use, useContext } from 'react'
+import { useContext } from 'react'
 import { NextPage } from 'next'
 import { Context } from '@store/context'
 
@@ -15,4 +15,4 @@ const HomeTemplate: NextPage = () => {
   )
 }
 
-export default HomeTemplate;
+export default HomeTemplate
