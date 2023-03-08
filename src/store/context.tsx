@@ -6,7 +6,7 @@ type Props = {
   children: React.ReactNode
 }
 
-export const ContextProvider = (props: Props) => {
+const ContextProvider: React.FC<Props> = (props) => {
 
   const testingVariable: string = 'Hello World'
 
@@ -16,3 +16,5 @@ export const ContextProvider = (props: Props) => {
     </Context.Provider>
   )  
 }
+
+export default ContextProvider
