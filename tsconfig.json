@@ -18,7 +18,9 @@
       "@atoms/*": ["./src/components/UI/atoms/*"],
       "@molecules/*": ["./src/components/UI/molecules/*"],
       "@organisms/*": ["./src/components/UI/organisms/*"],
-      "@templates/*": ["./src/components/templates/*"]
+      "@templates/*": ["./src/components/templates/*"],
+      "@store/*": ["./src/store/*"],
+      "@styles/*": ["./src/styles/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
