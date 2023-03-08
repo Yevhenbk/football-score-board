@@ -1,8 +1,7 @@
 import { useContext } from 'react'
-import { NextPage } from 'next'
 import { Context } from '@store/context'
 
-const HomeTemplate: NextPage = () => {
+const HomeTemplate: React.FC = () => {
 
   const { testingVariable } = useContext(Context)
 

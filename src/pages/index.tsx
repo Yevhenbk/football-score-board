@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import HomeTemplate from '@templates/HomeTemplate'
+import { NextPage } from 'next'
 
-export default function Home() {
+const Home: NextPage = () => {
   return (
     <>
       <Head>
@@ -14,3 +15,5 @@ export default function Home() {
     </>
   )
 }
+
+export default Home
