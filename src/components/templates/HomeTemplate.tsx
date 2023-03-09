@@ -15,7 +15,7 @@ const HomeTemplate: React.FC = () => {
         onClick={() => startGame('Mexico', 'Canada')} 
         testId='start-mexico-canada'
       >
-        <p>Start Mexico vs Canada</p>
+        <p>Mexico vs Canada</p>
       </Button> 
 
       <div>
