@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import { Context } from '@store/context'
+import Button from '../UI/Button'
 
 const HomeTemplate: React.FC = () => {
 
@@ -10,12 +11,12 @@ const HomeTemplate: React.FC = () => {
       className='flex flex-col justify-center 
       items-center w-[100%] h-[100vh] gap-12'
     >
-      <button 
+      <Button 
         onClick={() => startGame('Mexico', 'Canada')} 
-        data-testid='start-mexico-canada'
+        testId='start-mexico-canada'
       >
-        Start Mexico vs Canada
-      </button> 
+        <p>Start Mexico vs Canada</p>
+      </Button> 
 
       <div>
         <h2 className='text-xl text-center'>Matches</h2>
