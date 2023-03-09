@@ -9,8 +9,8 @@ interface Props {
 const Button: React.FC<Props> = (props) => {
   return (
     <div
-      className='btn min-w-40 h-12 bg-pink-500 
-      text-white text-lg flex flex-row px-8
+      className='btn min-w-32 h-12 bg-transparent
+      text-white text-lg flex flex-row px-4
       justify-center items-center gap-4 m-0
       hover:bg-pink-600 cursor-pointer'
       onClick={props.onClick}
