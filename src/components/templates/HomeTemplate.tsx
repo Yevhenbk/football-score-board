@@ -1,6 +1,7 @@
 import { useContext, FC } from 'react'
 import { Context } from '@store/context'
 import Button from '../UI/Button'
+import { Match } from '../../utils/Match'
 
 const DotElement: FC = () => {
   return (
@@ -71,7 +72,7 @@ const HomeTemplate: FC = () => {
           <DotElement />
         </div>
         {matches && matches.length > 0 ? 
-          matches.map((match: any, index: any) => (
+          matches.map((match: Match, index: number) => (
             <div key={index} data-testid={match}>
               {match.homeTeam} {match.homeScore} - {match.awayTeam} {match.awayScore}
             </div>)) : 
