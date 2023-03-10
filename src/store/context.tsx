@@ -1,6 +1,5 @@
 import { createContext, useState } from 'react'
 import { Match } from '../utils/Match'
-import MatchItem from '@UI/MatchItem'
 
 export const Context = createContext<any>('')
 
