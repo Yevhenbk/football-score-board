@@ -26,9 +26,21 @@ const ContextProvider: React.FC<Props> = (props) => {
     setMatches(prevMatches => [...prevMatches.slice(0, index), ...prevMatches.slice(index + 1)])
   }
 
+  const updateScore = (index: number, homeScore: number, awayScore: number) => {
+    setMatches(prevMatches => [
+      ...prevMatches.slice(0, index),
+      {
+        ...prevMatches[index],
+        homeScore: homeScore,
+        awayScore: awayScore
+      },
+      ...prevMatches.slice(index + 1)
+    ])
+  }
+
   return (
     <Context.Provider 
-      value={{ matches, setMatches, startGame, finishGame }}
+      value={{ matches, setMatches, startGame, finishGame, updateScore }}
     >
       {props.children}
     </Context.Provider>
