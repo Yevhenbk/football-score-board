@@ -1,15 +1,8 @@
 import { useContext, FC } from 'react'
 import { Context } from '@store/context'
 import Button from '../UI/Button'
+import DotElement from '../UI/DotElement'
 import { Match } from '../../utils/Match'
-
-const DotElement: FC = () => {
-  return (
-    <div 
-      className='w-[.35rem] h-[.35rem] bg-white rounded-full'
-    />
-  )
-}
 
 const HomeTemplate: FC = () => {
 
