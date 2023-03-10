@@ -8,7 +8,7 @@ import { gameData, GameData } from '@utils/GameData'
 
 const HomeTemplate: FC = () => {
 
-  const { matches, startGame } = useContext(Context)
+  const { matches, startGame, finishGame } = useContext(Context)
 
   return (
     <main 
@@ -55,7 +55,14 @@ const HomeTemplate: FC = () => {
               awayTeam={match.awayTeam}
               homeScore={match.homeScore}
               awayScore={match.awayScore}
-            />)) : 
+            >
+              <Button
+                onClick={() => finishGame(index)}
+                testId={`finish-${index}`}
+              >
+                Finish
+              </Button>
+            </MatchItem>)) : 
           <h5
             className='text-md text-center w-[35rem]'
           >
