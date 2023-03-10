@@ -6,7 +6,7 @@ interface Props {
   homeScore: number,
   awayScore: number,
   testId: string,
-  children: ReactNode
+  children?: ReactNode
 }
 
 const MatchItem: FC<Props> = (props) => {
