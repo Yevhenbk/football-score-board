@@ -13,7 +13,7 @@ const HomeTemplate: FC = () => {
   return (
     <main 
       className='flex flex-col justify-start pt-12
-      items-center w-[100%] h-[100vh] gap-16'
+      items-center w-[100%] h-[100%] gap-16'
     >
       <div 
         className='flex flex-row rounded-[3px] overflow-hidden 
