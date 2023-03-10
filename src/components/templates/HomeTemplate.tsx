@@ -60,19 +60,19 @@ const HomeTemplate: FC = () => {
                 onClick={() => updateScore(index, match.homeScore + 1, match.awayScore)}
                 testId={`home-score-${index}`}
               >
-                Home Score +1
+                <p>Home Score +1</p>
               </Button>
               <Button
                 onClick={() => finishGame(index)}
                 testId={`finish-${index}`}
               >
-                Finish
+                <p>Finish</p>
               </Button>
               <Button
                 onClick={() => updateScore(index, match.homeScore, match.awayScore + 1)}
                 testId={`away-score-${index}`}
               >
-                Away Score +1
+                <p>Away Score +1</p>
               </Button>
             </MatchItem>)) : 
           <h5
