@@ -12,7 +12,7 @@ interface Props {
 const MatchItem: FC<Props> = (props) => {
   return (
     <div
-      className='flex flex-col w-[35rem] justify-center gap-5
+      className='flex flex-col w-[35rem] justify-center
       text-2xl bg-[#4444] items-center p-4 rounded-[3px]' 
       data-testid={props.testId}
     >
