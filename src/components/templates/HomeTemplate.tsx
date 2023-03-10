@@ -43,7 +43,7 @@ const HomeTemplate: FC = () => {
         <div 
           className='flex gap-4'
         >
-          {[...Array(3)].map((_, index) => (
+          {[...Array(3)].map((_, index: number) => (
             <DotElement key={index} />
           ))}
         </div>
