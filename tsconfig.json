@@ -15,12 +15,11 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
-      "@atoms/*": ["./src/components/UI/atoms/*"],
-      "@molecules/*": ["./src/components/UI/molecules/*"],
-      "@organisms/*": ["./src/components/UI/organisms/*"],
+      "@UI/*": ["./src/components/UI/*"],
       "@templates/*": ["./src/components/templates/*"],
       "@store/*": ["./src/store/*"],
-      "@styles/*": ["./src/styles/*"]
+      "@styles/*": ["./src/styles/*"],
+      "@utils/*": ["./src/utils/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
