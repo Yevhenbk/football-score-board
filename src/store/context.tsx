@@ -1,5 +1,6 @@
 import { createContext, useState } from 'react'
 import { Match } from '../utils/Match'
+import MatchItem from '@UI/MatchItem'
 
 export const Context = createContext<any>('')
 
@@ -38,9 +39,25 @@ const ContextProvider: React.FC<Props> = (props) => {
     ])
   }
 
+  const sortMatches = (matches: Match[]) => {
+    return [...matches].sort((a, b) => {
+      const aTotal = a.homeScore + a.awayScore
+      const bTotal = b.homeScore + b.awayScore
+  
+      if (aTotal !== bTotal) {
+        return bTotal - aTotal
+      } else {
+        return matches.indexOf(b) - matches.indexOf(a)
+      }
+    })
+  }
+
+  const sortedMatches = sortMatches(matches)
+
   return (
     <Context.Provider 
-      value={{ matches, setMatches, startGame, finishGame, updateScore }}
+      value={{ matches, setMatches, startGame, finishGame, updateScore,
+      sortedMatches }}
     >
       {props.children}
     </Context.Provider>
