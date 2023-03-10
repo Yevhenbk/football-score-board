@@ -12,8 +12,8 @@ interface Props {
 const MatchItem: FC<Props> = (props) => {
   return (
     <div
-      className='flex flex-col w-[35rem] justify-center
-      text-2xl bg-[#4444] items-center py-4 px-8 rounded-[3px]' 
+      className='flex flex-col w-[35rem] justify-center gap-5
+      text-2xl bg-[#4444] items-center p-4 rounded-[3px]' 
       data-testid={props.testId}
     >
       <div
@@ -38,7 +38,7 @@ const MatchItem: FC<Props> = (props) => {
       </div>
       <div
         className='flex flex-row justify-between
-        items-center w-[100%]'
+        items-center w-[100%] bg-[#5A3BF8] rounded-[3px]'
       >
         {props.children}
       </div>
