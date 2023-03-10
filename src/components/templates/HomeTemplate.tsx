@@ -1,8 +1,16 @@
-import { useContext } from 'react'
+import { useContext, FC } from 'react'
 import { Context } from '@store/context'
 import Button from '../UI/Button'
 
-const HomeTemplate: React.FC = () => {
+const DotElement: FC = () => {
+  return (
+    <div 
+      className='w-[.35rem] h-[.35rem] bg-white rounded-full'
+    />
+  )
+}
+
+const HomeTemplate: FC = () => {
 
   const { matches, startGame } = useContext(Context)
 
@@ -48,9 +56,20 @@ const HomeTemplate: React.FC = () => {
       </div>
 
       <div
-        className='flex flex-col gap-8'
+        className='flex flex-col gap-8 items-center'
       >
-        <h2 className='text-3xl text-center'>Matches</h2>
+        <h2 
+          className='text-3xl text-center'
+        >
+          Matches
+        </h2>
+        <div 
+          className='flex gap-4'
+        >
+          <DotElement />
+          <DotElement />
+          <DotElement />
+        </div>
         {matches && matches.length > 0 ? 
           matches.map((match: any, index: any) => (
             <div key={index} data-testid={match}>
