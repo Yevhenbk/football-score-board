@@ -14,7 +14,7 @@ const HomeTemplate: FC = () => {
   return (
     <main 
       className='flex flex-col justify-start pt-12
-      items-center w-[100%] h-[100%] gap-16'
+      items-center w-[100%] h-[100%] gap-16 mb-20'
     >
       <div 
         className='flex flex-row rounded-[3px] overflow-hidden 
@@ -57,24 +57,29 @@ const HomeTemplate: FC = () => {
               homeScore={match.homeScore}
               awayScore={match.awayScore}
             >
-              <Button
-                onClick={() => updateScore(index, match.homeScore + 1, match.awayScore)}
-                testId={`home-score-${index}`}
+              <div
+                className='flex flex-row justify-between overflow-hidden
+                items-center w-[100%] bg-[#5A3BF8] rounded-[3px] mt-[1.25rem]'
               >
-                <p>Home Score +1</p>
-              </Button>
-              <Button
-                onClick={() => finishGame(index)}
-                testId={`finish-${index}`}
-              >
-                <p>Finish</p>
-              </Button>
-              <Button
-                onClick={() => updateScore(index, match.homeScore, match.awayScore + 1)}
-                testId={`away-score-${index}`}
-              >
-                <p>Away Score +1</p>
-              </Button>
+                <Button
+                  onClick={() => updateScore(index, match.homeScore + 1, match.awayScore)}
+                  testId={`home-score-${index}`}
+                >
+                  <p>Home Score +1</p>
+                </Button>
+                <Button
+                  onClick={() => finishGame(index)}
+                  testId={`finish-${index}`}
+                >
+                  <p>Finish</p>
+                </Button>
+                <Button
+                  onClick={() => updateScore(index, match.homeScore, match.awayScore + 1)}
+                  testId={`away-score-${index}`}
+                >
+                  <p>Away Score +1</p>
+                </Button>
+              </div>
             </MatchItem>)) : 
           <h5
             className='text-md text-center w-[35rem]'
