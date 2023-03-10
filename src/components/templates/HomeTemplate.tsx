@@ -73,7 +73,7 @@ const HomeTemplate: FC = () => {
             className='text-md'
           >
             Here you'll see a list of matches after adding each of them by pressing
-            bottons from above.
+            bottons from above
           </h5>
         }
       </div>

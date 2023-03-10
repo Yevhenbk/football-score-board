@@ -1,4 +1,4 @@
-import { ReactNode, MouseEventHandler } from 'react'
+import { ReactNode, MouseEventHandler, FC } from 'react'
 
 interface Props {
   children: ReactNode,
@@ -6,7 +6,7 @@ interface Props {
   testId: string
 }
 
-const Button: React.FC<Props> = (props) => {
+const Button: FC<Props> = (props) => {
   return (
     <div
       className='btn min-w-32 h-12 bg-transparent
