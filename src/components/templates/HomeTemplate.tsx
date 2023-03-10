@@ -82,6 +82,30 @@ const HomeTemplate: FC = () => {
             bottons from above
           </h5>
         }
+        <div
+          className='flex flex-col gap-8 items-center'
+        >
+          <h2 
+            className='text-3xl text-center'
+          >
+            Summary
+          </h2>
+          <div 
+            className='flex gap-4'
+          >
+            {[...Array(3)].map((_, index) => (
+              <DotElement key={index} />
+            ))}
+          </div>
+          {matches && matches.length > 0 ? 
+          <></> :
+          <h5
+            className='text-md text-center w-[35rem]'
+          >
+            Here you'll see ordered summary of matches you add
+          </h5>
+          }
+        </div>
       </div>
     </main>
   )
