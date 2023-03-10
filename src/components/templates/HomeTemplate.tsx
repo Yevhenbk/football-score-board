@@ -20,8 +20,14 @@ const HomeTemplate: FC = () => {
         bg-gradient-to-r from-[#cd6164] via-pink-500 to-[#5A3BF8]'
       >
         {gameData.map(({ teamA, teamB, testId, label }: GameData, index: number) => (
-          <Button key={index} onClick={() => startGame(teamA, teamB)} testId={testId}>
-            <p>{label}</p>
+          <Button 
+            key={index} 
+            onClick={() => startGame(teamA, teamB)} 
+            testId={testId}
+          >
+            <p>
+              {label}
+            </p>
           </Button>
         ))}
     </div>
