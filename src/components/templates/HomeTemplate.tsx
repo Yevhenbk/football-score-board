@@ -8,7 +8,8 @@ import { gameData, GameData } from '@utils/GameData'
 
 const HomeTemplate: FC = () => {
 
-  const { matches, startGame, finishGame, updateScore } = useContext(Context)
+  const { matches, startGame, finishGame, updateScore,
+  sortedMatches } = useContext(Context)
 
   return (
     <main 
@@ -98,12 +99,20 @@ const HomeTemplate: FC = () => {
             ))}
           </div>
           {matches && matches.length > 0 ? 
-          <></> :
-          <h5
-            className='text-md text-center w-[35rem]'
-          >
-            Here you'll see ordered summary of matches you add
-          </h5>
+          sortedMatches.map((match: Match, index: number) => (
+            <MatchItem
+              key={index} 
+              testId={`match-${index}`}
+              homeTeam={match.homeTeam}
+              awayTeam={match.awayTeam}
+              homeScore={match.homeScore}
+              awayScore={match.awayScore}
+            />)) :
+            <h5
+              className='text-md text-center w-[35rem]'
+            >
+              Here you'll see ordered summary of matches you add
+            </h5>
           }
         </div>
       </div>
