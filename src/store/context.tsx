@@ -22,11 +22,13 @@ const ContextProvider: React.FC<Props> = (props) => {
     setMatches(prevMatches => [...prevMatches, newMatch])
   }
 
-  const testingVariable: string = 'Hello World'
+  const finishGame = (index: number) => {
+    setMatches(prevMatches => [...prevMatches.slice(0, index), ...prevMatches.slice(index + 1)])
+  }
 
   return (
     <Context.Provider 
-      value={{ testingVariable, matches, setMatches, startGame }}
+      value={{ matches, setMatches, startGame, finishGame }}
     >
       {props.children}
     </Context.Provider>
