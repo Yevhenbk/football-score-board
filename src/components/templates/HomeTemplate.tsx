@@ -2,6 +2,7 @@ import { useContext, FC } from 'react'
 import { Context } from '@store/context'
 import Button from '@UI/Button'
 import DotElement from '@UI/DotElement'
+import MatchItem from '@UI/MatchItem'
 import { Match } from '@utils/Match'
 import { gameData, GameData } from '@utils/GameData'
 
@@ -41,11 +42,16 @@ const HomeTemplate: FC = () => {
         </div>
         {matches && matches.length > 0 ? 
           matches.map((match: Match, index: number) => (
-            <div key={index} data-testid={match}>
-              {match.homeTeam} {match.homeScore} - {match.awayTeam} {match.awayScore}
-            </div>)) : 
+            <MatchItem
+              key={index} 
+              testId={`match-${index}`}
+              homeTeam={match.homeTeam}
+              awayTeam={match.awayTeam}
+              homeScore={match.homeScore}
+              awayScore={match.awayScore}
+            />)) : 
           <h5
-            className='text-md'
+            className='text-md text-center w-[35rem]'
           >
             Here you'll see a list of matches after adding each of them by pressing
             bottons from above
