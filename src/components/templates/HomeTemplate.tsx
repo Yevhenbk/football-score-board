@@ -3,6 +3,7 @@ import { Context } from '@store/context'
 import Button from '@UI/Button'
 import DotElement from '@UI/DotElement'
 import { Match } from '@utils/Match'
+import { gameData, GameData } from '@utils/GameData'
 
 const HomeTemplate: FC = () => {
 
@@ -13,42 +14,16 @@ const HomeTemplate: FC = () => {
       className='flex flex-col justify-start pt-12
       items-center w-[100%] h-[100vh] gap-16'
     >
-      <div
-        className='flex flex-row rounded-[3px] overflow-hidden
+      <div 
+        className='flex flex-row rounded-[3px] overflow-hidden 
         bg-gradient-to-r from-[#cd6164] via-pink-500 to-[#5A3BF8]'
       >
-        <Button 
-          onClick={() => startGame('Mexico', 'Canada')} 
-          testId='start-mexico-canada'
-        >
-          <p>Mexico vs Canada</p>
-        </Button>
-        <Button 
-          onClick={() => startGame('Spain', 'Brazil')} 
-          testId='start-spain-brazil'
-        >
-          <p>Spain vs Brazil</p>
-        </Button>
-        <Button 
-          onClick={() => startGame('Germany', 'France')} 
-          testId='start-germany-franc'
-        >
-          <p>Germany vs France</p>
-        </Button>
-        <Button 
-          onClick={() => startGame('Uruguay', 'Italy')} 
-          testId='start-uruguay-italy'
-        >
-          <p>Uruguay vs Italy</p>
-        </Button>
-        <Button 
-          onClick={() => startGame('Argentina', 'Australia')} 
-          testId='start-argentina-ausralia'
-        >
-          <p>Argentina vs Australia</p>
-        </Button>
-      </div>
-
+        {gameData.map(({ teamA, teamB, testId, label }: GameData, index: number) => (
+          <Button key={index} onClick={() => startGame(teamA, teamB)} testId={testId}>
+            <p>{label}</p>
+          </Button>
+        ))}
+    </div>
       <div
         className='flex flex-col gap-8 items-center'
       >
