@@ -9,7 +9,7 @@ const HomeTemplate: React.FC = () => {
   return (
     <main 
       className='flex flex-col justify-start pt-12
-      items-center w-[100%] h-[100vh] gap-12'
+      items-center w-[100%] h-[100vh] gap-16'
     >
       <div
         className='flex flex-row rounded-[3px] overflow-hidden
@@ -47,12 +47,22 @@ const HomeTemplate: React.FC = () => {
         </Button>
       </div>
 
-      <div>
-        <h2 className='text-xl text-center'>Matches</h2>
-        {matches.map((match: any, index: any) => (
-          <div key={index} data-testid={match}>
-            {match.homeTeam} {match.homeScore} - {match.awayTeam} {match.awayScore}
-          </div>))}
+      <div
+        className='flex flex-col gap-8'
+      >
+        <h2 className='text-3xl text-center'>Matches</h2>
+        {matches && matches.length > 0 ? 
+          matches.map((match: any, index: any) => (
+            <div key={index} data-testid={match}>
+              {match.homeTeam} {match.homeScore} - {match.awayTeam} {match.awayScore}
+            </div>)) : 
+          <h5
+            className='text-md'
+          >
+            Here you'll see a list of matches after adding each of them by pressing
+            bottons from above.
+          </h5>
+        }
       </div>
     </main>
   )
