@@ -1,10 +1,10 @@
-import { createContext, useState } from 'react'
+import { createContext, useState, ReactNode } from 'react'
 import { Match } from '../utils/Match'
 
 export const Context = createContext<any>('')
 
 interface Props {
-  children: React.ReactNode
+  children: ReactNode
 }
 
 const ContextProvider: React.FC<Props> = (props) => {
