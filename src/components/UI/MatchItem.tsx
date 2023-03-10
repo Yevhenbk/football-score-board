@@ -37,7 +37,7 @@ const MatchItem: FC<Props> = (props) => {
         </h6>
       </div>
       <div
-        className='flex flex-row justify-between
+        className='flex flex-row justify-between overflow-hidden
         items-center w-[100%] bg-[#5A3BF8] rounded-[3px]'
       >
         {props.children}
