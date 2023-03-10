@@ -6,7 +6,7 @@ type Props = {
   children: React.ReactNode
 }
 
-type Match = {
+export interface Match {
   homeTeam: string
   awayTeam: string
   homeScore: number
