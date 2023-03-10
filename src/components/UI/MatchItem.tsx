@@ -36,12 +36,7 @@ const MatchItem: FC<Props> = (props) => {
           {props.awayScore}
         </h6>
       </div>
-      <div
-        className='flex flex-row justify-between overflow-hidden
-        items-center w-[100%] bg-[#5A3BF8] rounded-[3px]'
-      >
-        {props.children}
-      </div>
+      {props.children}
     </div>
   )
 }
