@@ -1,16 +1,10 @@
 import { createContext, useState } from 'react'
+import { Match } from '../utils/Match'
 
 export const Context = createContext<any>('')
 
-type Props = {
+interface Props {
   children: React.ReactNode
-}
-
-export interface Match {
-  homeTeam: string
-  awayTeam: string
-  homeScore: number
-  awayScore: number
 }
 
 const ContextProvider: React.FC<Props> = (props) => {
